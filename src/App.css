@@ -1,10 +1,32 @@
 .App {
   text-align: center;
 }
+.line{
+  cursor:default;
+}
 .word:hover{
   color:red;
 }
 .topContainer{
   height:20vh;
-  width:100vh;
+  width:100%;
+  width:80vw;
+  max-width:100%;
+  margin: auto;
+	display: inline-block;
+  /* align-items: flex-start;
+	flex-wrap:wrap; */
+	line-height:.6em;
+	padding-top:1em;
+	margin-top:1em;
+  cursor:default;
+  margin:5px;
+  background-color: lavenderblush;
+  overflow:scroll;
+}
+.wordContainer{
+  display:inherit;
+  padding:.1em;
+  margin:.1em;
+  max-height: 100%;
 }

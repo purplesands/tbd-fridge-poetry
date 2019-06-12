@@ -8,16 +8,15 @@ import {
 import arrayMove from 'array-move';
 import { connect } from 'react-redux';
 
-const DragHandle = sortableHandle(() => <span>::</span>);
 
 const SortableItem = sortableElement(({value}) => (
-  <tr>
+  <div className="wordContainer">
     {value}
-  </tr>
+  </div>
 ));
 
 const SortableContainer = sortableContainer(({children}) => {
-  return <th>{children}</th>;
+  return <div className="topContainer">{children}</div>;
 });
 
 class Sorting extends Component {
@@ -32,14 +31,11 @@ class Sorting extends Component {
   render() {
     const {items} = this.state.words;
     return (
-      <div className="topContainer">
       <SortableContainer onSortEnd={this.onSortEnd} axis="xy">
         {this.props.words.map((value, index) => (
           <SortableItem key={`item-${index}`} index={index} value={value} />
         ))}
       </SortableContainer>
-      </div>
-
     );
   }
 }

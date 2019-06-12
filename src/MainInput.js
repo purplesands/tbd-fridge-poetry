@@ -38,14 +38,14 @@ class MainInput extends React.Component {
   }
   renderResults=()=>{
     return this.state.results.map(r=>{
-        return <li className="line">{this.renderLine(r)}</li>
+        return <div className="line">{this.renderLine(r)}</div>
       })
     }
 
   sortResponse=(arr)=>{
     for(let i=0;i<arr.length;i++){
       arr[i].lines.forEach(line=>{
-        
+
         if(line.toLowerCase().split(' ').includes(this.state.input.toLowerCase())){
           this.setState({
             results:[...this.state.results, line]
