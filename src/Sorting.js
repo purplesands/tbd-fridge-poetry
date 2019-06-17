@@ -8,9 +8,8 @@ import {
 import arrayMove from 'array-move';
 import { connect } from 'react-redux';
 
-
 const SortableItem = sortableElement(({value}) => (
-  <div className="wordContainer">
+  <div className="wordContainer" style={{color:'#2A20E9'}}>
     {value}
   </div>
 ));
@@ -28,8 +27,11 @@ class Sorting extends Component {
     this.props.dispatch({ type: "SORT_WORDS", payload:arrayMove(this.props.words, oldIndex,newIndex)})
   };
 
+
+
   render() {
-    const {items} = this.state.words;
+    // const {items} = this.state.words;
+
     return (
       <SortableContainer onSortEnd={this.onSortEnd} axis="xy">
         {this.props.words.map((value, index) => (

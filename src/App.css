@@ -8,7 +8,7 @@
   color:red;
 }
 .topContainer{
-  height:20vh;
+  height:50vh;
   width:100%;
   width:80vw;
   max-width:100%;
@@ -21,12 +21,18 @@
 	margin-top:1em;
   cursor:default;
   margin:5px;
-  background-color: lavenderblush;
+  background-color: #E4D3AA;
   overflow:scroll;
 }
+
 .wordContainer{
   display:inherit;
   padding:.1em;
   margin:.1em;
   max-height: 100%;
+}
+
+.wordContainer:hover{
+  color:#EEB191;
+  text-shadow: 1px 1px #D174B2;
 }
